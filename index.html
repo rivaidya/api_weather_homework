@@ -52,7 +52,7 @@
     	 	console.log($("input[name=temp]:checked")[0].defaultValue);
     	 }
 
-		let query = "http://api.openweathermap.org/data/2.5/weather?q="+ city_name + "&units="+ temp +"&APPID=d08c6a35224c82ba0b1a67a7600c2277";
+		let query = "https://api.openweathermap.org/data/2.5/weather?q="+ city_name + "&units="+ temp +"&APPID=d08c6a35224c82ba0b1a67a7600c2277";
         console.log("Query is :" + query)
 
 
@@ -63,7 +63,7 @@
         let temp_high = json.main.temp_max;
         let temp_low = json.main.temp_min;
         let weather_icon = json.weather[0].icon;
-        let usable_icon = "http://openweathermap.org/img/wn/" + weather_icon + "@2x.png";
+        let usable_icon = "https://openweathermap.org/img/wn/" + weather_icon + "@2x.png";
 
         console.log(temp_current);
         console.log(temp_high);
