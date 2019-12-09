@@ -65,20 +65,22 @@
         let weather_icon = json.weather[0].icon;
         let usable_icon = "https://openweathermap.org/img/wn/" + weather_icon + "@2x.png";
 
-        console.log(temp_current);
-        console.log(temp_high);
-        console.log(temp_low);
-        console.log(weather_icon); 
-        console.log(usable_icon);
-
-        $("#tempImg").attr("src", usable_icon);
-        $("#tempImg").attr("alt", json.weather[0].description);
-        $("#tempImg").attr("title", json.weather[0].main);
 
         $("#loc").html(city_name);
         $("#temp").html(temp_current);
         $("#high").html(temp_high);
         $("#low").html(temp_low);
+        $("#tempImg").attr("src", usable_icon);
+        $("#tempImg").attr("title", json.weather[0].main);
+        $("#tempImg").attr("alt", json.weather[0].description);
+        
+
+
+        console.log(temp_current);
+        console.log(temp_high);
+        console.log(temp_low);
+        console.log(weather_icon); 
+        console.log(usable_icon);
     })
     }
     </script>
